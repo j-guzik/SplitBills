@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:contentPadding="3dp"
+    android:layout_marginTop="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/billIconIv"
+            android:layout_width="67dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="67dp"
+            android:src="@drawable/ic_receipt">
+        </com.blogspot.atifsoftwares.circularimageview.CircularImageView>
+
+        <TextView
+            android:id="@+id/billTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/billIconIv"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/MoneyIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_money"
+            android:layout_toRightOf="@id/billIconIv"
+            android:layout_marginTop="32sp"
+            android:layout_marginLeft="14dp"/>
+        <TextView
+            android:id="@+id/billCostTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cost"
+            android:layout_toRightOf="@id/MoneyIV"
+            android:layout_marginLeft="2dp"
+            android:textSize="14sp"
+            android:layout_marginTop="34sp"
+            android:textColor="@color/purple_500"
+            />
+        <TextView
+            android:id="@+id/paidByTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paid by:"
+            android:layout_marginLeft="15dp"
+            android:textSize="16sp"
+            android:layout_marginTop="60sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="2dp"
+            />
+        <TextView
+            android:id="@+id/paidByNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email"
+            android:layout_toRightOf="@id/paidByTV"
+            android:layout_marginLeft="6dp"
+            android:textSize="16sp"
+            android:layout_marginTop="60sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="2dp"
+            />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/purple_500">
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:textAlignment="center">
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/default_pic"
+                >
+            <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+                android:id="@+id/avatarIv"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:padding="15dp"
+                >
+            </com.blogspot.atifsoftwares.circularimageview.CircularImageView>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="310dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/emailTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:layout_marginTop="17dp"
+                android:textColor="#F9A826"
+                android:fontFamily="@font/pottaoneregular"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65dp"
+                android:src="@drawable/logout" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="center">
+                <Button
+                    android:id='@+id/logoutBtn'
+                    android:text="Logout"
+                    android:background="@drawable/mybutton"
+                    android:layout_width="110dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="50dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/fab"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/mybutton"
+        android:layout_marginTop="238dp"
+        android:src="@drawable/ic_edit_white"
+        android:backgroundTint="#F9A826"
+        />
+
+</RelativeLayout>

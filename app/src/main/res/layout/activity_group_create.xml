@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".GroupCreateActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Create Group"
+        android:layout_above="@id/groupIconIv"
+        android:textSize="43sp"
+        android:layout_marginBottom="30dp"
+        android:textColor="#F9A826"
+        android:fontFamily="@font/pottaoneregular"
+        android:gravity="center_horizontal" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/img"-->
+<!--        android:layout_width="210dp"-->
+<!--        android:layout_height="190dp"-->
+<!--        android:layout_above="@id/groupIconIv"-->
+<!--        android:src="@drawable/group"-->
+<!--        android:layout_marginBottom="25dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        />-->
+    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+        android:id="@+id/groupIconIv"
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="200dp"
+        android:layout_above="@id/groupTitleTIL"
+        android:src="@drawable/group_default_plus"
+        android:layout_marginBottom="20dp">
+    </com.blogspot.atifsoftwares.circularimageview.CircularImageView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="290dp"
+        android:id="@+id/groupTitleTIL">
+
+        <EditText
+            android:id="@+id/groupTitleEt"
+            android:inputType='text'
+            android:hint="group title"
+            android:layout_height="50dp"
+            android:layout_width="230dp"
+            android:background="@color/white"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id='@+id/createGroupBtn'
+        android:text="Create"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mybutton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="160dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="190dp" />
+
+</RelativeLayout>

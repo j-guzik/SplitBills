@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:contentPadding="3dp"
+    android:layout_marginTop="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/groupIconIv"
+            android:layout_width="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="100dp"
+            android:src="@drawable/group_default">
+        </com.blogspot.atifsoftwares.circularimageview.CircularImageView>
+
+        <TextView
+            android:id="@+id/groupTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Group Title"
+            android:layout_toRightOf="@id/groupIconIv"
+            android:layout_marginLeft="15dp"
+            android:textSize="19sp"
+            android:layout_marginTop="32sp"
+            android:textColor="@color/black"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

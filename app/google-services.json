@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "450174403915",
+    "project_id": "billssplitter-40789",
+    "storage_bucket": "billssplitter-40789.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450174403915:android:6ac995c29ea9031ee694ce",
+        "android_client_info": {
+          "package_name": "com.example.billssplitter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450174403915-5iaride3ptp5lkvdnkitupgone0kqb3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8pU-pyZrnU-okLSAfckVMRmijUYmbKpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450174403915-5iaride3ptp5lkvdnkitupgone0kqb3o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

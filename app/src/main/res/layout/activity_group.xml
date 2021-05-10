@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupActivity">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/purple_500"
+        android:theme="@style/Widget.AppCompat.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+            <ImageButton
+                android:id="@+id/arrowImgBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_centerVertical="true"
+                android:background="@color/purple_500"/>
+
+            <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+               android:id="@+id/groupIconIv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/group_default"/>
+            <TextView
+                android:id="@+id/groupTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/groupIconIv"
+                android:text="Group Title"
+                android:textSize="18sp"
+                android:layout_marginLeft="7dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/action_add_participant"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_add_particip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:background="@color/purple_500"
+            />
+        </RelativeLayout>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <Button
+        android:id="@+id/billAddImgBtn"
+        android:layout_height="80dp"
+        android:layout_width="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/ic_receipt"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/billsRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/row_bills_lists"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+</RelativeLayout>
