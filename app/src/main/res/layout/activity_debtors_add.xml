@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DebtorsAddActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/participantsRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/row_participant_add"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+    <Button
+        android:id='@+id/addDebtorsBtn'
+        android:text="Finish"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mybutton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="90dp" />
+
+
+</RelativeLayout>

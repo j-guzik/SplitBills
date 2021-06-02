@@ -38,7 +38,7 @@ public class GroupActivity extends AppCompatActivity {
     private CollapsingToolbarLayout toolbar;
     private ImageView groupIconIv;
     private TextView groupTitleTv;
-    private ImageButton action_add_participant;
+    private ImageButton action_add_participant, arrowImgBtn;
     private Button billAddImgBtn;
     private RecyclerView billsRv;
 
@@ -57,13 +57,11 @@ public class GroupActivity extends AppCompatActivity {
         action_add_participant = findViewById(R.id.action_add_participant);
         billAddImgBtn = findViewById(R.id.billAddImgBtn);
         billsRv = findViewById(R.id.billsRv);
+        arrowImgBtn = findViewById(R.id.arrowImgBtn);
 
         //get id of the group
         Intent intent = getIntent();
         groupId = intent.getStringExtra("groupId");
-
-        Intent intent1 = getIntent();
-        billId = intent.getStringExtra("billId");
 
         firebaseAuth = FirebaseAuth.getInstance();
         loadGroupInfo();
@@ -85,6 +83,13 @@ public class GroupActivity extends AppCompatActivity {
                 Intent intent = new Intent(GroupActivity.this, BillCreateActivity.class);
                 intent.putExtra("groupId", groupId);
                 startActivity(intent);
+            }
+        });
+
+        arrowImgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GroupActivity.this, DashboardActivity.class));
             }
         });
 

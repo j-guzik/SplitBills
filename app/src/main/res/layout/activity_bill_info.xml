@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BillInfoActivity">
+
+    <TextView
+        android:id="@+id/titleInfoBillTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Title"
+        android:textSize="38sp"
+        android:layout_above="@id/receiptImgV"
+        android:layout_marginBottom="15dp"
+        android:textColor="#F9A826"
+        android:fontFamily="@font/pottaoneregular"
+        android:gravity="center_horizontal" />
+
+    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+        android:id="@+id/receiptImgV"
+        android:layout_width="215dp"
+        android:layout_height="215dp"
+        android:layout_above="@id/costTV"
+        android:src="@drawable/addbill"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/costTV"
+        android:layout_above="@id/paidTitleTV"
+        android:layout_centerHorizontal="true"
+        android:text="cost"
+        android:textSize="33sp"
+        android:textColor="@color/purple_500"
+        android:layout_marginBottom="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/paidTitleTV"
+        android:layout_above="@id/whoPaidTV"
+        android:layout_centerHorizontal="true"
+        android:text="Paid by:"
+        android:textSize="21sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/whoPaidTV"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="300dp"
+        android:text="paid by"
+        android:textSize="20sp">
+    </TextView>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/paidOffBtn"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginBottom="265dp"-->
+<!--        android:background="@drawable/mybutton"-->
+<!--        android:src="@drawable/ic_price_check"-->
+<!--        android:backgroundTint= "@color/purple_500"-->
+<!--        android:layout_marginRight="53dp">-->
+<!--    </ImageButton>-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/debtorsRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_debtors"
+            android:layout_marginTop="450dp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</RelativeLayout>

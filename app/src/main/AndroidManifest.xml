@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BillsSplitter">
-        <activity android:name=".BillCreateActivity"></activity>
+        <activity android:name=".DebtorsAddActivity"></activity>
+        <activity android:name=".BillInfoActivity" />
+        <activity android:name=".BillCreateActivity" />
         <activity android:name=".GroupParticipantAddActivity" />
         <activity android:name=".GroupActivity" />
         <activity android:name=".GroupCreateActivity" />
@@ -26,7 +28,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" /> <!-- add in app tag -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Theme.BillsSplitter" />
     </application>
 
 </manifest>

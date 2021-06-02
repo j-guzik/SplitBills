@@ -1,6 +1,7 @@
 package com.example.billssplitter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
+
+//
+
 
 public class AdapterBills  extends RecyclerView.Adapter<AdapterBills.HolderBills>{
 
@@ -34,18 +40,28 @@ public class AdapterBills  extends RecyclerView.Adapter<AdapterBills.HolderBills
         //get data
         ModelBills model = billsList.get(position);
         String billId = model.getBillId();
+        String groupId = model.getGroupId();
         String billTitle = model.getBillTitle();
         String billCost = model.getBillCost();
+        String paidBy = model.getPaidBy();
+        String billPhoto = model.getBillPhoto();
 
         //set data
         holder.billTitleTv.setText(billTitle);
         holder.billCostTv.setText(billCost);
+        holder.paidByNameTV.setText(paidBy);
 
         //handle group click
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //open group
+                //open bill info
+                Intent intent = new Intent(context, BillInfoActivity.class);
+                intent.putExtra("billId", billId);
+                intent.putExtra("groupId", groupId);
+                intent.putExtra("cost", billCost);
+                intent.putExtra("paidBy", paidBy);
+                context.startActivity(intent);
             }
         });
     }
@@ -59,13 +75,14 @@ public class AdapterBills  extends RecyclerView.Adapter<AdapterBills.HolderBills
 
     class HolderBills extends RecyclerView.ViewHolder{
         private ImageView billIconIv;
-        private TextView billTitleTv, billCostTv;
+        private TextView billTitleTv, billCostTv, paidByNameTV;
 
         public HolderBills(@NonNull View itemView) {
             super(itemView);
             billIconIv = itemView.findViewById(R.id.billIconIv);
             billTitleTv = itemView.findViewById(R.id.billTitleTv);
             billCostTv = itemView.findViewById(R.id.billCostTv);
+            paidByNameTV = itemView.findViewById(R.id.paidByNameTV);
         }
     }
 }

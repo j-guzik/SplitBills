@@ -12,19 +12,27 @@
         android:textAlignment="center"
         android:text="Add an expense"
         android:layout_above="@+id/imgAdd"
-        android:textSize="40sp"
+        android:textSize="38sp"
         android:layout_marginBottom="30dp"
         android:textColor="#F9A826"
         android:fontFamily="@font/pottaoneregular"
         android:gravity="center_horizontal" />
 
-    <ImageView
+    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
         android:id="@+id/imgAdd"
-        android:layout_width="210dp"
-        android:layout_height="140dp"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
         android:layout_above="@id/billTitleTIL"
         android:src="@drawable/addbill"
         android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        />
+    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+        android:id="@+id/mPreviewIv"
+        android:layout_width="190dp"
+        android:layout_height="185dp"
+        android:layout_above="@id/billTitleTIL"
+        android:layout_marginBottom="20dp"
         android:layout_centerHorizontal="true"
         />
 
@@ -33,15 +41,15 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_width="230dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="340dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="380dp"
         android:id="@+id/billTitleTIL">
 
         <EditText
             android:id="@+id/billTitleEt"
             android:inputType="text"
             android:hint="title"
-            android:layout_height="50dp"
+            android:layout_height="67dp"
             android:layout_width="230dp"
             android:background="@color/white"
             />
@@ -50,28 +58,63 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_width="230dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="290dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="310dp"
         android:id="@+id/costTIL">
 
         <EditText
             android:id="@+id/costTitleEt"
-            android:inputType='numberDecimal'
+            android:autoLink="all"
             android:hint="cost"
-            android:layout_height="50dp"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            android:minHeight="67dp"
             android:layout_width="230dp"
             android:background="@color/white"
+            android:digits="0123456789.,"
             />
     </com.google.android.material.textfield.TextInputLayout>
+    <ImageButton
+        android:id="@+id/addImageImBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_scan"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:layout_toRightOf="@id/costTIL"
+        android:layout_alignTop="@+id/costTIL"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="275dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Paid by"
+        />
+    <Spinner
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="230dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="220dp"
+        android:id="@+id/spinnerPaidBy">
+    </Spinner>
 
     <Button
         android:id='@+id/addBillBtn'
-        android:text="Add"
+        android:text="Next"
         android:layout_alignParentBottom="true"
         android:background="@drawable/mybutton"
         android:layout_centerHorizontal="true"
         android:layout_width="160dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="190dp" />
+        android:layout_marginBottom="140dp" />
 
+    <ImageView
+        android:id="@+id/mPreviewIv2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>
